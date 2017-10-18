@@ -313,6 +313,7 @@ export const Wrapper = styled.div`
         ${p => p.container ? `
             padding-left: 20px;
             padding-right: 20px;
+            max-width: 320px;
         ` : ''};
     `}
     ${media.phone`
