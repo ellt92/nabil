@@ -28,6 +28,7 @@ function scrollEvent(event) {
 
 const HeaderElement = styled(Wrapper)`
     height: 80px;
+    width: 100%;
     top: 0;
     left: 0;
     position: fixed;
@@ -40,7 +41,22 @@ const HeaderImageElement = styled.img`
     height: 80px;
     max-width: 1020px !important;
     ${media.phone`
-        margin-left: -80px;
+      :before {
+        content: '';
+        display: block;
+        position: absolute;
+      }
+    `}
+`;
+
+const ImageWrapperElement = styled.div`
+    height: 80px;
+    width: 400px;
+    overflow: hidden;
+    ${media.phone`
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     `}
 `;
 
@@ -48,6 +64,29 @@ const HeaderBlackElement = styled(Wrapper)`
     position: fixed;
     width: 3840px;
     margin-left: 375px;
+    ${media.phone`
+      display: none;
+    `}
+`;
+
+const MobileLeft = styled(Wrapper)`
+    height: 80px;
+    position: absolute;
+    width: 100%;
+    left: calc(-50% - 200px);
+    ${media.desktop`
+      display: none;
+    `}
+`;
+
+const MobileRight = styled(Wrapper)`
+    height: 80px;
+    position: absolute;
+    width: 100%;
+    left: calc(50% + 200px);
+    ${media.desktop`
+      display: none;
+    `}
 `;
 
 class Header extends Component {
@@ -72,8 +111,12 @@ class Header extends Component {
         const { visible } = this.state;
         return (
             <HeaderElement flex visible={isHomepage ? visible : true}>
-                <Link to='/' onClick={() => window.scrollTo(0, 0)}>
-                    <HeaderImageElement src={HeaderImg}/>
+                <Link to='/' onClick={() => window.scrollTo(0, 0)} style={{width: '100%'}}>
+                  <MobileLeft bgc='darkgray'/>
+                  <MobileRight bgc='darkgray'/>
+                    <ImageWrapperElement>
+                        <HeaderImageElement src={HeaderImg}/>
+                    </ImageWrapperElement>
                 </Link>
                 <HeaderBlackElement width='3840px' height='80px' bgc='darkgray'/>
             </HeaderElement>

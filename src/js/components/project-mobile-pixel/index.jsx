@@ -113,12 +113,12 @@ const ProjectMobilePixel = () => (
                     <Text title colour='gray' fontsize={58}>Wireframes</Text>
                 </Wrapper>
                 <Wrapper flex wrap centerboth>
-                    <ImageAndAnnotation image={Wireframes1} annotation='Backs navigation'/>
-                    <ImageAndAnnotation image={Wireframes2} annotation='Back upload'/>
-                    <ImageAndAnnotation image={Wireframes3} annotation='Layout options'/>
-                    <ImageAndAnnotation image={Wireframes4} annotation='Backs navigation'/>
-                    <ImageAndAnnotation image={Wireframes5} annotation='Back upload'/>
-                    <ImageAndAnnotation image={Wireframes6} annotation='Layout options'/>
+                    <ImageAndAnnotation image={Wireframes1} annotation='Back Null State'/>
+                    <ImageAndAnnotation image={Wireframes2} annotation='Change Layout'/>
+                    <ImageAndAnnotation image={Wireframes3} annotation='Edit Text Colour'/>
+                    <ImageAndAnnotation image={Wireframes4} annotation='Replace Image'/>
+                    <ImageAndAnnotation image={Wireframes5} annotation='Resting State'/>
+                    <ImageAndAnnotation image={Wireframes6} annotation='Text Object'/>
                 </Wrapper>
             </Wrapper>
         </Wrapper>

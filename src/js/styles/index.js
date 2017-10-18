@@ -111,6 +111,12 @@ export const getFont = p => {
 };
 
 export const getMobileFontSize = p => {
+    if (p.fontsizemobile) {
+      return `
+          font-size: ${p.fontsizemobile}px;
+          letter-spacing: 8px;
+      `;
+    }
     if (Number.isInteger(p.fontsize)) {
         if (p.fontsize === 144) {
             return `
@@ -351,6 +357,11 @@ export const Wrapper = styled.div`
     `}
     ${media.phone`
         ${p => p.marginpx == '-125px 0 50px' ? `
+            margin: 0;
+        ` : ''};
+    `}
+    ${media.phone`
+        ${p => p.marginpx == '-125px auto 50px' ? `
             margin: 0;
         ` : ''};
     `}

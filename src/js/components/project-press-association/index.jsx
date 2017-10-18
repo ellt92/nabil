@@ -66,13 +66,13 @@ const PressAssociation = () => (
         <Wrapper bgc='white'>
             <Wrapper container overflowauto positionrelative>
                 <Wrapper flex paddingpx='200px 0 0'>
-                        <Text title colour='green' fontsize={84}>Press<br/>Association</Text>
+                        <Text title colour='green' fontsizemobile={36} fontsize={144}>Press<br/>Association</Text>
                 </Wrapper>
                 <Wrapper maxwidth='425px' marginpx='30px 0 0' paddingpx='0 0 250px 0'>
                     <Text bold fontsize={18} colour='gray'>Objective</Text>
                     <br/>
                     <br/>
-                    <Text light fontsize={24} colour='gray'>To create a service ( <a href='http://snappa.press.net/#!/feeds'><Text colour='green' bold fontsize={24}>SNAPPA</Text></a> ) aimed at attracting and engaging younger audiences who increasingly consume short snippets of content. presented in a visually led, shareable platform.</Text>
+                    <Text light fontsize={24} colour='gray'>To create a service ( <a target='_blank' href='http://snappa.press.net/#!/feeds'><Text colour='green' bold fontsize={24}>SNAPPA</Text></a> ) aimed at attracting and engaging younger audiences who increasingly consume short snippets of content. presented in a visually led, shareable platform.</Text>
                 </Wrapper>
                 <Wrapper absolute top={140} right={-20}>
                     <img src={MainImage}/>
@@ -120,12 +120,14 @@ const PressAssociation = () => (
             <Wrapper container paddingpx='100px 0 0'>
                 <Text title fontsize={144} colour='gray'>Design Discovery</Text>
             </Wrapper>
-            <Wrapper container marginpx='-125px 0 50px' flex aligncenter justifyspacebetween>
-                <Wrapper flex aligncenter justifyspacebetween>
-                    <DesktopImage image={Discovery1}/>
-                    <DesktopImage image={Discovery2}/>
+            <Wrapper container>
+                <Wrapper marginpx='-125px auto 50px' flex aligncenter justifyspacebetween>
+                    <Wrapper flex aligncenter justifyspacebetween>
+                        <DesktopImage image={Discovery1}/>
+                        <DesktopImage image={Discovery2}/>
+                    </Wrapper>
                 </Wrapper>
-            </Wrapper>
+          </Wrapper>
         </Wrapper>
         <Wrapper bgc='lightgray' height={`${window.innerHeight}px`}>
             <Details/>
