@@ -38,7 +38,7 @@ const Homepage = () => (
             <Wrapper container flex centerboth column height='100%'>
                 <Text marginpx='0' fontsize={144} colour='gray' title center letterspacing={20}>Nabil<br/>Sharif</Text>
                 <Text fontsize={36} colour='gray' center letterspacing={5} light >
-                    UI / UX designer Currently working at <Text fontsize={36} center letterspacing={5} semibold colour='white'><a href='https://www.moo.com/uk' target='_blank'>MOO</a></Text>.
+                    Product Designer currently freelancing
                 </Text>
             </Wrapper>
         </Wrapper>
